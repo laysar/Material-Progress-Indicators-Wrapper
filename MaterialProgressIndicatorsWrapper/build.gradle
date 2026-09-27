@@ -1,0 +1,74 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.maven.publish)
+}
+
+android {
+    namespace 'com.laysar.Wrapper'
+    compileSdk 37
+
+    defaultConfig {
+        minSdk 26
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    mavenPublishing {
+        coordinates(
+                "io.github.laysar",
+                "MaterialProgressIndicatorsWrapper",
+                "1.5.0"
+        )
+
+        pom {
+            name = "MaterialProgressIndicatorsWrapper"
+            description = ""
+            inceptionYear = "2026"
+
+            url = "https://github.com/Laysar/Material-Progress-Indicators-Wrapper"
+
+            licenses {
+                license {
+                    name = "The Apache License, Version 2.0"
+                    url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                    distribution = "repo"
+                }
+            }
+
+            developers {
+                developer {
+                    id = "laysar"
+                    name = "Laysar"
+                    url = "https://github.com/Laysar"
+                }
+            }
+
+            scm {
+                url = "https://github.com/Laysar/Material-Progress-Indicators-Wrapper"
+                connection = "scm:git:git://github.com/Laysar/Material-Progress-Indicators-Wrapper.git"
+                developerConnection = "scm:git:ssh://git@github.com/Laysar/Material-Progress-Indicators-Wrapper.git"
+            }
+        }
+
+        publishToMavenCentral()
+        signAllPublications()
+    }
+
+}
+
+dependencies {
+    implementation libs.androidx.annotation
+    implementation libs.androidx.constraintLayout
+}
