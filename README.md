@@ -1,23 +1,18 @@
-[Arabic](README.md) • [English](README.md)
-
 # MaterialProgressIndicators
 
-غلاف موحد لمؤشرات Material من أنواع التحميل (Loading) والدائري (Circular) والخطي (Linear)، بواجهة متناسقة واحدة في Java وXML
+A unified Android wrapper that brings together the loading indicator and circular and linear progress from (Material 3 Expressive) within a single consistent interface for use in Java and XML
 
-## الاعتماد (Dependency)
+## Dependency
 
-تتطلب المكتبة Material Components بالإصدار `1.14.0`
-
-```kotlin
+```
 implementation("io.github.laysar:MaterialProgressIndicatorsWrapper:0.9.0")
 ```
 
-## مؤشر هجين 3 في 1 (3-in-1 Hybrid Indicator)
+## 3-in-1 Hybrid Indicator
 
-> في `v0.9` استخدم `MaterialProgressIndicators` من XML  
-> لا تنشئ العنصر باستخدام `new MaterialProgressIndicators(context)`، وسيتم تحديث الإنشاء البرمجي في `v0.9.5` أو `v1.0.0`
+> In `v0.9.0`, use `MaterialProgressIndicators` from XML. Do not instantiate it with `new MaterialProgressIndicators(context)`. Programmatic creation will be revised in `v0.9.5` or `v1.0.0`.
 
-أنواع المؤشرات المتوفرة:
+Available indicator types:
 
 ```text
 Loading
@@ -25,7 +20,7 @@ Circular
 Linear
 ```
 
-يُستخدم نفس العنصر للأنواع الثلاثة، ويُحدد النوع المطلوب باستخدام `IndicatorType`
+Use the same view for all three types and select the one you want with `IndicatorType`.
 
 ```xml
 <com.laysar.Wrapper.MaterialProgressIndicators
@@ -35,7 +30,7 @@ Linear
     app:IndicatorType="Circular" />
 ```
 
-بعد ذلك يمكن التحكم بالعنصر من Java:
+Then control it from Java:
 
 ```java
 MaterialProgressIndicators Progress = findViewById(R.id.Progress);
@@ -45,9 +40,9 @@ Progress.setColor(Color.RED);
 Progress.setTrackThickness("6dp");
 ```
 
-# مرجع الواجهة البرمجية (API Reference)
+# API Reference
 
-> تستخدم دوال Java وخصائص XML نظام التسمية نفسه عندما يتوفر الخيار في الجهتين، وبعض الميزات متاحة عمدًا في Java أو XML فقط
+> Java methods and XML attributes use the same naming scheme wherever an equivalent XML option exists. Some features are intentionally available only in Java or XML.
 
 ```java
 COMMON - Loading / Circular / Linear
@@ -119,9 +114,9 @@ setStopPadding(String Padding)
 setInnerCorners(String Corners)
 ```
 
-# توافق المكونات (Component Compatibility)
+# Component Compatibility
 
-> تعني `✓` أن الواجهة البرمجية مدعومة في نوع المؤشر، وتعني `-` أنها لا تنطبق عليه
+> `✓` means the API is supported by that indicator type. `-` means the API does not apply to that type.
 
 | API | Loading | Circular | Linear |
 |---|:---:|:---:|:---:|
@@ -157,11 +152,11 @@ setInnerCorners(String Corners)
 | `setStopPadding(...)` | - | - | ✓ |
 | `setInnerCorners(...)` | - | - | ✓ |
 
-# التوفر في Java وXML (Java & XML Availability)
+# Java & XML Availability
 
-> تُستخدم Java للتحكم أثناء التشغيل (Runtime)، بينما تُستخدم XML لإعداد المؤشر عند إنشاء العنصر، وبعض دوال Java تجمع قيمًا توجد كخصائص منفصلة في XML
+> Java is used for runtime control, while XML configures the indicator when the view is created. Some Java methods combine values that are separate attributes in XML.
 
-| الميزة | Java | XML |
+| Feature | Java | XML |
 |---|:---:|:---:|
 | `IndicatorType` | - | ✓ |
 | `Variant` | - | ✓ |
@@ -170,8 +165,8 @@ setInnerCorners(String Corners)
 | `Direction` | ✓ | ✓ |
 | `ContainerColor` | ✓ | ✓ |
 | `ContainerSize` | ✓ | ✓ |
-| `ContainerHeight` | عبر `setContainerSize(Height, Width)` | ✓ |
-| `ContainerWidth` | عبر `setContainerSize(Height, Width)` | ✓ |
+| `ContainerHeight` | via `setContainerSize(Height, Width)` | ✓ |
+| `ContainerWidth` | via `setContainerSize(Height, Width)` | ✓ |
 | `ShowDelay` | - | ✓ |
 | `MinHideDelay` | - | ✓ |
 | `Indeterminate` | ✓ | ✓ |
@@ -186,16 +181,16 @@ setInnerCorners(String Corners)
 | `HideAnimation` | ✓ | ✓ |
 | `HideVisibility` | ✓ | ✓ |
 | `WaveLength` | ✓ | ✓ |
-| `WaveLengthDeterminate` | عبر `setWaveLength(Determinate, Indeterminate)` | ✓ |
-| `WaveLengthIndeterminate` | عبر `setWaveLength(Determinate, Indeterminate)` | ✓ |
+| `WaveLengthDeterminate` | via `setWaveLength(Determinate, Indeterminate)` | ✓ |
+| `WaveLengthIndeterminate` | via `setWaveLength(Determinate, Indeterminate)` | ✓ |
 | `WaveAmplitude` | ✓ | ✓ |
 | `WaveSpeed` | ✓ | ✓ |
-| `WaveRangeMin` | عبر `setWaveRange(Min, Max)` | ✓ |
-| `WaveRangeMax` | عبر `setWaveRange(Min, Max)` | ✓ |
+| `WaveRangeMin` | via `setWaveRange(Min, Max)` | ✓ |
+| `WaveRangeMax` | via `setWaveRange(Min, Max)` | ✓ |
 | `AutoHide` | ✓ | ✓ |
 | `SpringStiffness` | ✓ | ✓ |
 | `SpringDamping` | ✓ | ✓ |
-| دالة `Spring` المدمجة | ✓ | - |
+| `Spring` combined setter | ✓ | - |
 | `Inset` | ✓ | ✓ |
 | `Animation` | ✓ | ✓ |
 | `StopSize` | ✓ | ✓ |
@@ -203,11 +198,11 @@ setInnerCorners(String Corners)
 | `InnerCorners` | ✓ | ✓ |
 | `ProgressListener` | ✓ | - |
 
-# القيم والوحدات (Values & Units)
+# Values & Units
 
-> تستقبل دوال Java الخاصة بالأبعاد القيم كنصوص تحتوي على الوحدة، وتتم عملية التحويل داخليًا دون الحاجة لتحويل `dp` أو `sp` أو الوحدات المدعومة الأخرى إلى بكسل يدويًا
+> Dimension-based Java APIs accept values as strings with units. Conversion is handled internally, so you do not need to convert `dp`, `sp`, or other supported units to pixels yourself.
 
-الوحدات القياسية المدعومة للأبعاد:
+Standard dimension values support:
 
 ```text
 px
@@ -221,7 +216,7 @@ mm
 qmm
 ```
 
-أمثلة:
+Examples:
 
 ```java
 Progress.setSize("48dp");
@@ -231,36 +226,36 @@ Progress.setContainerSize("2.5cm");
 Progress.setWaveAmplitude("4dp");
 ```
 
-عند تحديد حجم الحاوية ببعدين، يكون ترتيب القيم دائمًا:
+For two-dimensional container sizing, the parameter order is always:
 
 ```text
 Height, Width
 ```
 
-مثال:
+Example:
 
 ```java
 Progress.setContainerSize("48dp", "64dp");
 ```
 
-تدعم `TrackCorners` و`InnerCorners` القيم المئوية أيضًا:
+Percentage values are supported by `TrackCorners` and `InnerCorners`.
 
 ```java
 Progress.setTrackCorners("50%");
 Progress.setInnerCorners("25%");
 ```
 
-وتدعم XML موارد الأبعاد (Dimension Resources) المعتادة في Android حيثما كانت مناسبة:
+XML also supports regular Android dimension resources where applicable.
 
 ```xml
 app:TrackThickness="@dimen/progress_track_thickness"
 ```
 
-# القيم المتاحة (Available Values)
+# Available Values
 
-> تستخدم الخيارات المغلقة ثوابت محددة مسبقًا في Java وقيمًا مكافئة في XML، بينما `IndicatorType` و`Variant` متاحتان في XML فقط ضمن `v0.9`
+> Closed options use predefined constants in Java and equivalent enum values in XML. `IndicatorType` and `Variant` are XML-only in `v0.9`.
 
-## نوع المؤشر (IndicatorType)
+## IndicatorType
 
 ```text
 Loading
@@ -268,29 +263,29 @@ Circular
 Linear
 ```
 
-مثال:
+Example:
 
 ```xml
 app:IndicatorType="Circular"
 ```
 
-## النمط (Variant)
+## Variant
 
-| المؤشر | القيم المتاحة |
+| Indicator | Available Values |
 |---|---|
 | Loading | `Default`, `Contained` |
 | Circular | `Default`, `Legacy`, `Wavy`, `Medium`, `Small`, `ExtraSmall` |
 | Linear | `Default`, `Legacy`, `Wavy` |
 
-مثال:
+Example:
 
 ```xml
 app:Variant="Wavy"
 ```
 
-## الاتجاه (Direction)
+## Direction
 
-متاح مع مؤشرات Loading وCircular وLinear
+Available on Loading, Circular, and Linear indicators.
 
 | Java | XML |
 |---|---|
@@ -301,7 +296,7 @@ app:Variant="Wavy"
 | `Direction.LEFT_TO_RIGHT` | `LeftToRight` |
 | `Direction.RIGHT_TO_LEFT` | `RightToLeft` |
 
-في Java:
+Java:
 
 ```java
 Progress.setDirection(
@@ -309,13 +304,13 @@ Progress.setDirection(
 );
 ```
 
-في XML:
+XML:
 
 ```xml
 app:Direction="StartToEnd"
 ```
 
-## الحركة (Animation)
+## Animation
 
 Circular:
 
@@ -331,7 +326,7 @@ Linear:
 | `Animation.DISJOINT` | `Disjoint` |
 | `Animation.CONTIGUOUS` | `Contiguous` |
 
-## حركة الإظهار (ShowAnimation)
+## ShowAnimation
 
 | Java | XML |
 |---|---|
@@ -339,7 +334,7 @@ Linear:
 | `ShowAnimation.OUTWARD` | `Outward` |
 | `ShowAnimation.INWARD` | `Inward` |
 
-## حركة الإخفاء (HideAnimation)
+## HideAnimation
 
 | Java | XML |
 |---|---|
@@ -348,7 +343,7 @@ Linear:
 | `HideAnimation.INWARD` | `Inward` |
 | `HideAnimation.ESCAPE` | `Escape` |
 
-## الرؤية بعد الإخفاء (HideVisibility)
+## HideVisibility
 
 | Java | XML |
 |---|---|
@@ -356,11 +351,11 @@ Linear:
 | `HideVisibility.INVISIBLE` | `Invisible` |
 | `HideVisibility.GONE` | `Gone` |
 
-# أحداث ProgressListener
+# ProgressListener Events
 
-> تتوفر `setProgressListener(...)` مع أنواع المؤشرات الثلاثة، بينما تنطبق أحداث التقدم (Progress) فقط على Circular وLinear
+> `setProgressListener(...)` is available for all three indicator types. Progress-specific callbacks apply only to Circular and Linear indicators.
 
-| الحدث | Loading | Circular | Linear |
+| Event | Loading | Circular | Linear |
 |---|:---:|:---:|:---:|
 | `onShow()` | ✓ | ✓ | ✓ |
 | `onHide()` | ✓ | ✓ | ✓ |
@@ -368,7 +363,7 @@ Linear:
 | `onProgressComplete()` | - | ✓ | ✓ |
 | `onProgressAnimationEnd()` | - | ✓ | ✓ |
 
-مثال:
+Example:
 
 ```java
 Progress.setProgressListener(
@@ -397,60 +392,60 @@ Progress.setProgressListener(
 );
 ```
 
-لإزالة المستمع (Listener):
+Remove the listener with:
 
 ```java
 Progress.setProgressListener(null);
 ```
 
-# القيود المهمة (Important Constraints)
+# Important Constraints
 
-> يمكن أن تؤدي القيم غير الصالحة أو التركيبات غير المدعومة إلى رمي `IllegalArgumentException` أو `IllegalStateException` أو `UnsupportedOperationException`
+> Invalid values or unsupported combinations can throw an `IllegalArgumentException`, `IllegalStateException`, or `UnsupportedOperationException`.
 
-## السرعة (Speed)
+## Speed
 
 ```text
 0.1 to 10.0
 ```
 
-## نطاق الموجة (WaveRange)
+## WaveRange
 
-يجب أن تكون القيمتان بين:
+Both values must be between:
 
 ```text
 0.0 and 1.0
 ```
 
-ويجب أن تكون `Min` أقل من أو تساوي `Max`
+`Min` must be less than or equal to `Max`.
 
 ```java
 Progress.setWaveRange(0.1f, 0.9f);
 ```
 
-## TrackCorners وInnerCorners
+## TrackCorners and InnerCorners
 
-يجب أن تكون النسبة المئوية بين:
+Percentage values must be between:
 
 ```text
 0% and 50%
 ```
 
-## النابض (Spring)
+## Spring
 
 ```text
 Stiffness > 0
 Damping > 0
 ```
 
-مثال:
+Example:
 
 ```java
 Progress.setSpring(500f, 0.7f);
 ```
 
-## الحركة المتصلة الخطية (Linear Contiguous Animation)
+## Linear Contiguous Animation
 
-تحتاج إلى 3 ألوان للمؤشر على الأقل:
+At least 3 indicator colors are required.
 
 ```java
 Progress.setColor(
@@ -460,4 +455,4 @@ Progress.setColor(
 );
 ```
 
-وعند استخدام الزوايا الخارجية أو الداخلية المستديرة مع `Contiguous`، يجب أن تكون قيمة `TrackGap` أكبر من `0`
+When rounded outer or inner corners are used with `Contiguous`, `TrackGap` must be greater than `0`.
