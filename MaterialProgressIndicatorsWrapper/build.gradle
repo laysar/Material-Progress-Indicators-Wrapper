@@ -5,10 +5,12 @@ plugins {
 
 android {
     namespace 'com.laysar.Wrapper'
-    compileSdk 37
 
     defaultConfig {
         minSdk 26
+        targetSdk 37
+        compileSdk 37
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -29,12 +31,12 @@ android {
         coordinates(
                 "io.github.laysar",
                 "MaterialProgressIndicatorsWrapper",
-                "1.5.0"
+                "0.9.0"
         )
 
         pom {
             name = "MaterialProgressIndicatorsWrapper"
-            description = ""
+            description = "A unified Android wrapper that brings together the loading indicator and circular and linear progress from (Material 3 Expressive) within a single consistent interface for use in Java and XML"
             inceptionYear = "2026"
 
             url = "https://github.com/Laysar/Material-Progress-Indicators-Wrapper"

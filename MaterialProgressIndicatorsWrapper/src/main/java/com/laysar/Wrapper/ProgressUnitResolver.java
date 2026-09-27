@@ -2,8 +2,6 @@ package com.laysar.Wrapper;
 
 import android.content.Context;
 
-import com.laysar.UnitParser;
-
 final class ProgressUnitResolver {
     private static final UnitParser.UnitPolicy DIMENSION_UNIT_POLICY = UnitParser.fromAllowedUnits(
             UnitParser.UnitType.PIXEL,
