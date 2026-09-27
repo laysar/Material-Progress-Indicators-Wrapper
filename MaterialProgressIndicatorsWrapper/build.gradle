@@ -71,4 +71,5 @@ android {
 dependencies {
     implementation libs.androidx.annotation
     implementation libs.androidx.constraintLayout
+    implementation libs.google.material3
 }

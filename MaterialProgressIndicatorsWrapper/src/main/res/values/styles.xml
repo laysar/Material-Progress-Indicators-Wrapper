@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MaterialProgressIndicatorsContainedChildTheme">
+        <item name="loadingIndicatorStyle">@style/Widget.Material3.LoadingIndicator.Contained</item>
+    </style>
+    <style name="MaterialProgressIndicatorsCircularDefaultChildTheme">
+        <item name="circularProgressIndicatorStyle">@style/Widget.Material3.CircularProgressIndicator</item>
+    </style>
+    <style name="MaterialProgressIndicatorsCircularLegacyChildTheme">
+        <item name="circularProgressIndicatorStyle">@style/Widget.Material3.CircularProgressIndicator.Legacy</item>
+    </style>
+    <style name="MaterialProgressIndicatorsCircularWavyChildTheme">
+        <item name="circularProgressIndicatorStyle">@style/Widget.Material3Expressive.CircularProgressIndicator.Wavy</item>
+    </style>
+    <style name="MaterialProgressIndicatorsCircularMediumChildTheme">
+        <item name="circularProgressIndicatorStyle">@style/Widget.Material3.CircularProgressIndicator.Medium</item>
+    </style>
+    <style name="MaterialProgressIndicatorsCircularSmallChildTheme">
+        <item name="circularProgressIndicatorStyle">@style/Widget.Material3.CircularProgressIndicator.Small</item>
+    </style>
+    <style name="MaterialProgressIndicatorsCircularExtraSmallChildTheme">
+        <item name="circularProgressIndicatorStyle">@style/Widget.Material3.CircularProgressIndicator.ExtraSmall</item>
+    </style>
+    <style name="MaterialProgressIndicatorsLinearDefaultChildTheme">
+        <item name="linearProgressIndicatorStyle">@style/Widget.Material3.LinearProgressIndicator</item>
+    </style>
+    <style name="MaterialProgressIndicatorsLinearLegacyChildTheme">
+        <item name="linearProgressIndicatorStyle">@style/Widget.Material3.LinearProgressIndicator.Legacy</item>
+    </style>
+    <style name="MaterialProgressIndicatorsLinearWavyChildTheme">
+        <item name="linearProgressIndicatorStyle">@style/Widget.Material3Expressive.LinearProgressIndicator.Wavy</item>
+    </style>
+</resources>

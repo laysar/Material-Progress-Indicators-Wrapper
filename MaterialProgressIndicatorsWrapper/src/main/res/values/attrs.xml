@@ -1,227 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<declare-styleable name="G2ConstraintLayout">
-		<attr name="G2FillColor"
-					format="color|reference" />
-		<attr name="G2Alpha"
-					format="string|reference|float|integer|fraction" />
-		<attr name="G2FillGradient"
-					format="string|reference" />
-		<attr name="G2FillGradientOrientation"
-					format="string|reference|float|integer" />
-		<attr name="G2FillGradientRepeatCount"
-					format="integer|reference" />
-		<attr name="G2FillOrderedBlend"
-					format="string|reference" />
-		<attr name="G2FillAverageBlend"
-					format="string|reference" />
-		<attr name="G2Corners"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2CornerTopLeft"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2CornerTopRight"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2CornerBottomLeft"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2CornerBottomRight"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2CornerTopStart"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2CornerTopEnd"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2CornerBottomStart"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2CornerBottomEnd"
-					format="string|reference|dimension|float|integer|fraction" />
-		<attr name="G2RoundedRectangleExtendedFraction"
-					format="string|reference|float|integer|fraction" />
-		<attr name="G2RoundedRectangleArcFraction"
-					format="string|reference|float|integer|fraction" />
-		<attr name="G2RoundedRectangleBezierCurvatureScale"
-					format="string|reference|float|integer" />
-		<attr name="G2RoundedRectangleArcCurvatureScale"
-					format="string|reference|float|integer" />
-		<attr name="G2CapsuleExtendedFraction"
-					format="string|reference|float|integer|fraction" />
-		<attr name="G2CapsuleArcFraction"
-					format="string|reference|float|integer|fraction" />
-		<attr name="G2StrokeColor"
-					format="color|reference" />
-		<attr name="G2StrokeWidth"
-					format="string|reference|dimension|float|integer" />
-		<attr name="G2StrokeAlpha"
-					format="string|reference|float|integer|fraction" />
-		<attr name="G2StrokePosition"
-					format="enum">
-			<enum name="Inside"
-						value="0" />
-			<enum name="Center"
-						value="1" />
-			<enum name="Outside"
-						value="2" />
-		</attr>
-		<attr name="G2StrokeGradient"
-					format="string|reference" />
-		<attr name="G2StrokeGradientOrientation"
-					format="string|reference|float|integer" />
-		<attr name="G2StrokeGradientRepeatCount"
-					format="integer|reference" />
-		<attr name="G2StrokeOrderedBlend"
-					format="string|reference" />
-		<attr name="G2StrokeAverageBlend"
-					format="string|reference" />
-		<attr name="G2StrokeSegmentCount"
-					format="integer|reference" />
-		<attr
-			name="G2StrokeGapLength"
-			format="string|reference|dimension|float|integer" />
-		<attr
-			name="G2StrokePatternAngle"
-			format="string|reference|float|integer" />
-		<attr name="G2StrokeSegmentCap"
-					format="enum">
-			<enum name="Sharp"
-						value="0" />
-			<enum name="Round"
-						value="1" />
-		</attr>
-		<attr name="G2StrokeLayer"
-					format="enum">
-			<enum name="BelowContent"
-						value="0" />
-			<enum name="AboveContent"
-						value="1" />
-		</attr>
-		<attr name="G2RippleColor"
-					format="color|reference" />
-		<attr name="G2RippleAlpha"
-					format="string|reference|float|integer|fraction" />
-		<attr name="G2ClipToOutline"
-					format="boolean|reference" />
-	</declare-styleable>
-	
-	<declare-styleable name="G2LinearLayout">
-		<attr name="G2FillColor" />
-		<attr name="G2Alpha" />
-		<attr name="G2FillGradient" />
-		<attr name="G2FillGradientOrientation" />
-		<attr name="G2FillGradientRepeatCount" />
-		<attr name="G2FillOrderedBlend" />
-		<attr name="G2FillAverageBlend" />
-		<attr name="G2Corners" />
-		<attr name="G2CornerTopLeft" />
-		<attr name="G2CornerTopRight" />
-		<attr name="G2CornerBottomLeft" />
-		<attr name="G2CornerBottomRight" />
-		<attr name="G2CornerTopStart" />
-		<attr name="G2CornerTopEnd" />
-		<attr name="G2CornerBottomStart" />
-		<attr name="G2CornerBottomEnd" />
-		<attr name="G2RoundedRectangleExtendedFraction" />
-		<attr name="G2RoundedRectangleArcFraction" />
-		<attr name="G2RoundedRectangleBezierCurvatureScale" />
-		<attr name="G2RoundedRectangleArcCurvatureScale" />
-		<attr name="G2CapsuleExtendedFraction" />
-		<attr name="G2CapsuleArcFraction" />
-		<attr name="G2StrokeColor" />
-		<attr name="G2StrokeWidth" />
-		<attr name="G2StrokeAlpha" />
-		<attr name="G2StrokePosition" />
-		<attr name="G2StrokeGradient" />
-		<attr name="G2StrokeGradientOrientation" />
-		<attr name="G2StrokeGradientRepeatCount" />
-		<attr name="G2StrokeOrderedBlend" />
-		<attr name="G2StrokeAverageBlend" />
-		<attr name="G2StrokeSegmentCount" />
-		<attr name="G2StrokeGapLength" />
-		<attr name="G2StrokePatternAngle" />
-		<attr name="G2StrokeSegmentCap" />
-		<attr name="G2StrokeLayer" />
-		<attr name="G2RippleColor" />
-		<attr name="G2RippleAlpha" />
-		<attr name="G2ClipToOutline" />
-	</declare-styleable>
-	
-	<declare-styleable name="G2BackgroundDrawable">
-		<attr name="G2FillColor" />
-		<attr name="G2Alpha" />
-		<attr name="G2FillGradient" />
-		<attr name="G2FillGradientOrientation" />
-		<attr name="G2FillGradientRepeatCount" />
-		<attr name="G2FillOrderedBlend" />
-		<attr name="G2FillAverageBlend" />
-		<attr name="G2Corners" />
-		<attr name="G2CornerTopLeft" />
-		<attr name="G2CornerTopRight" />
-		<attr name="G2CornerBottomLeft" />
-		<attr name="G2CornerBottomRight" />
-		<attr name="G2CornerTopStart" />
-		<attr name="G2CornerTopEnd" />
-		<attr name="G2CornerBottomStart" />
-		<attr name="G2CornerBottomEnd" />
-		<attr name="G2RoundedRectangleExtendedFraction" />
-		<attr name="G2RoundedRectangleArcFraction" />
-		<attr name="G2RoundedRectangleBezierCurvatureScale" />
-		<attr name="G2RoundedRectangleArcCurvatureScale" />
-		<attr name="G2CapsuleExtendedFraction" />
-		<attr name="G2CapsuleArcFraction" />
-		<attr name="G2StrokeColor" />
-		<attr name="G2StrokeWidth" />
-		<attr name="G2StrokeAlpha" />
-		<attr name="G2StrokePosition" />
-		<attr name="G2StrokeGradient" />
-		<attr name="G2StrokeGradientOrientation" />
-		<attr name="G2StrokeGradientRepeatCount" />
-		<attr name="G2StrokeOrderedBlend" />
-		<attr name="G2StrokeAverageBlend" />
-		<attr name="G2StrokeSegmentCount" />
-		<attr name="G2StrokeGapLength" />
-		<attr name="G2StrokePatternAngle" />
-		<attr name="G2StrokeSegmentCap" />
-		<attr name="G2RippleColor" />
-		<attr name="G2RippleAlpha" />
-		<attr name="G2ClipToOutline" />
-	</declare-styleable>
-	
-	<declare-styleable name="G2ViewAttributes">
-		<attr name="G2FillColor" />
-		<attr name="G2Alpha" />
-		<attr name="G2FillGradient" />
-		<attr name="G2FillGradientOrientation" />
-		<attr name="G2FillGradientRepeatCount" />
-		<attr name="G2FillOrderedBlend" />
-		<attr name="G2FillAverageBlend" />
-		<attr name="G2Corners" />
-		<attr name="G2CornerTopLeft" />
-		<attr name="G2CornerTopRight" />
-		<attr name="G2CornerBottomLeft" />
-		<attr name="G2CornerBottomRight" />
-		<attr name="G2CornerTopStart" />
-		<attr name="G2CornerTopEnd" />
-		<attr name="G2CornerBottomStart" />
-		<attr name="G2CornerBottomEnd" />
-		<attr name="G2RoundedRectangleExtendedFraction" />
-		<attr name="G2RoundedRectangleArcFraction" />
-		<attr name="G2RoundedRectangleBezierCurvatureScale" />
-		<attr name="G2RoundedRectangleArcCurvatureScale" />
-		<attr name="G2CapsuleExtendedFraction" />
-		<attr name="G2CapsuleArcFraction" />
-		<attr name="G2StrokeColor" />
-		<attr name="G2StrokeWidth" />
-		<attr name="G2StrokeAlpha" />
-		<attr name="G2StrokePosition" />
-		<attr name="G2StrokeGradient" />
-		<attr name="G2StrokeGradientOrientation" />
-		<attr name="G2StrokeGradientRepeatCount" />
-		<attr name="G2StrokeOrderedBlend" />
-		<attr name="G2StrokeAverageBlend" />
-		<attr name="G2StrokeSegmentCount" />
-		<attr name="G2StrokeGapLength" />
-		<attr name="G2StrokePatternAngle" />
-		<attr name="G2StrokeSegmentCap" />
-		<attr name="G2StrokeLayer" />
-		<attr name="G2RippleColor" />
-		<attr name="G2RippleAlpha" />
-		<attr name="G2ClipToOutline" />
-	</declare-styleable>
+    <declare-styleable name="MaterialProgressIndicators">
+        <attr name="IndicatorType" format="enum">
+            <enum name="Loading" value="0" />
+            <enum name="Circular" value="1" />
+            <enum name="Linear" value="2" />
+        </attr>
+        <attr name="Variant" format="enum">
+            <enum name="Default" value="0" />
+            <enum name="Contained" value="1" />
+            <enum name="Legacy" value="2" />
+            <enum name="Wavy" value="3" />
+            <enum name="Medium" value="4" />
+            <enum name="Small" value="5" />
+            <enum name="ExtraSmall" value="6" />
+        </attr>
+        <attr name="Color" format="color|reference" />
+        <attr name="Size" format="dimension|string|reference" />
+        <attr name="ContainerColor" format="color|reference" />
+        <attr name="ContainerSize" format="dimension|string|reference" />
+        <attr name="ContainerHeight" format="dimension|string|reference" />
+        <attr name="ContainerWidth" format="dimension|string|reference" />
+        <attr name="ShowDelay" format="integer|reference" />
+        <attr name="MinHideDelay" format="integer|reference" />
+        <attr name="Indeterminate" format="boolean" />
+        <attr name="Progress" format="integer" />
+        <attr name="Max" format="integer" />
+        <attr name="TrackColor" format="color|reference" />
+        <attr name="TrackThickness" format="dimension|string|reference" />
+        <attr name="TrackCorners" format="dimension|fraction|string|reference" />
+        <attr name="TrackGap" format="dimension|string|reference" />
+        <attr name="Speed" format="float|reference" />
+        <attr name="ShowAnimation" format="enum">
+            <enum name="None" value="0" />
+            <enum name="Outward" value="1" />
+            <enum name="Inward" value="2" />
+        </attr>
+        <attr name="HideAnimation" format="enum">
+            <enum name="None" value="0" />
+            <enum name="Outward" value="1" />
+            <enum name="Inward" value="2" />
+            <enum name="Escape" value="3" />
+        </attr>
+        <attr name="HideVisibility" format="enum">
+            <enum name="Visible" value="0" />
+            <enum name="Invisible" value="4" />
+            <enum name="Gone" value="8" />
+        </attr>
+        <attr name="WaveLength" format="dimension|string|reference" />
+        <attr name="WaveLengthDeterminate" format="dimension|string|reference" />
+        <attr name="WaveLengthIndeterminate" format="dimension|string|reference" />
+        <attr name="WaveAmplitude" format="dimension|string|reference" />
+        <attr name="WaveSpeed" format="dimension|string|reference" />
+        <attr name="WaveRangeMin" format="float|reference" />
+        <attr name="WaveRangeMax" format="float|reference" />
+        <attr name="AutoHide" format="boolean" />
+        <attr name="Inset" format="dimension|string|reference" />
+        <attr name="Direction" format="enum">
+            <enum name="Auto" value="0" />
+            <enum name="Natural" value="1" />
+            <enum name="StartToEnd" value="2" />
+            <enum name="EndToStart" value="3" />
+            <enum name="LeftToRight" value="4" />
+            <enum name="RightToLeft" value="5" />
+        </attr>
+        <attr name="Animation" format="enum">
+            <enum name="Smooth" value="0" />
+            <enum name="Trash" value="1" />
+            <enum name="Disjoint" value="2" />
+            <enum name="Contiguous" value="3" />
+        </attr>
+        <attr name="StopSize" format="dimension|string|reference" />
+        <attr name="StopPadding" format="dimension|string|reference" />
+        <attr name="InnerCorners" format="dimension|fraction|string|reference" />
+        <attr name="SpringStiffness" format="float|reference" />
+        <attr name="SpringDamping" format="float|reference" />
+    </declare-styleable>
 </resources>
